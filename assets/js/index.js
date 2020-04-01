@@ -15,8 +15,8 @@ const tick = () => {
 tick();
 
 
-
-const mango = new Mango(90, -1, 0, 3);
+// mango
+const mango = new Mango(110, -1, 0, 3);
 
 const tickM = () => {
   console.log("TickM");
@@ -31,8 +31,8 @@ tickM();
 
 
 
-
-const grape = new Grape(140, -1, 0, 3);
+// grape
+const grape = new Grape(180, -1, 0, 3);
 
 const tickG = () => {
   console.log("TickG");
@@ -47,8 +47,8 @@ tickG();
 
 
 
-
-const orange = new Orange(200, -1, 0, 3);
+// orange
+const orange = new Orange(250, -1, 0, 3);
 
 const tickO = () => {
   console.log("TickO");
@@ -60,3 +60,35 @@ const tickO = () => {
 };
 
 tickO();
+
+
+
+// peach
+const peach = new Peach(320, -1, 0, 3);
+
+const tickP = () => {
+  console.log("TickP");
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  peach.tickP();
+
+  window.requestAnimationFrame(tickP);
+};
+
+tickP();
+
+
+
+// pear
+const pear = new Pear(400, -1, 0, 3);
+
+const tickPear = () => {
+  console.log("TickPear");
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  pear.tickPear();
+
+  window.requestAnimationFrame(tickPear);
+};
+
+tickPear();
