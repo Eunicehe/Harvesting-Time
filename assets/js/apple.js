@@ -40,15 +40,11 @@ class Apple {
 
   draw() {
       ctx.beginPath();
-      ctx.drawImage(this.image, this.x, this.y, 100, 100);
+      ctx.drawImage(this.image, this.x, this.y, 70, 70);
   }
 
   move() {
 
-    if (
- {
-
-    }
     this.x += this.speedX;
     this.y += this.speedY;
   }
@@ -59,3 +55,9 @@ class Apple {
   }
 
 }
+
+
+
+
+
+
