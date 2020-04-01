@@ -92,3 +92,19 @@ const tickPear = () => {
 };
 
 tickPear();
+
+
+
+// basket
+const basket = new Basket(10, 300, 3, 0);
+
+const tickB = () => {
+  console.log("TickB");
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  basket.tickB();
+
+  window.requestAnimationFrame(tickB);
+};
+
+tickB();
