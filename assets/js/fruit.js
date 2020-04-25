@@ -1,5 +1,7 @@
-class Mango {
+class fruit {
   image;
+  imagePath;
+  fruitName;
   x;
   y;
   // speed = {
@@ -9,8 +11,9 @@ class Mango {
   speedX = 1;
   speedY = 1;
 
-  constructor(theX, theY, speedX, speedY) {
-    console.log("We've loaded mango!");
+  constructor(theX, theY, speedX, speedY, fruitName, imagePath) {
+    this.fruitName = fruitName;
+    console.log("We've loaded " + this.fruitName);
     console.log(theX, theY);
 
     this.x = theX;
@@ -23,7 +26,7 @@ class Mango {
     if (speedY !== undefined) {
       this.speedY = speedY;
     }
-
+    this.imagePath = imagePath;
     this.loadImages();
   }
 
@@ -35,7 +38,7 @@ class Mango {
     this.image.onload = () => {
       this.draw();
     };
-    this.image.src = "./assets/img/mango.png";
+    this.image.src = this.imagePath;
   }
 
   draw() {
@@ -48,7 +51,7 @@ class Mango {
     this.y += this.speedY;
   }
 
-  tickM() {
+  tick() {
     this.move();
     this.draw();
   }

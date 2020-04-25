@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Harvesting Time!</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-</head>
-<body>
-    <canvas id="drawing" width="500" height="500"></canvas>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
 
+  <body>
+    <div id="score-life">
+      Score: <span id="score">0</span> | Life:
+      <span id="life"></span>
+    </div>
+    <canvas id="game" class="game" width="800" height="500"></canvas>
+
+    <button id="restart">Restart</button>
+    <script src="./assets/js/fruit.js"></script>
     <script src="./assets/js/apple.js"></script>
     <script src="./assets/js/mango.js"></script>
     <script src="./assets/js/grape.js"></script>
@@ -17,5 +24,5 @@
     <script src="./assets/js/pear.js"></script>
     <script src="./assets/js/basket.js"></script>
     <script src="./assets/js/index.js"></script>
-</body>
+  </body>
 </html>

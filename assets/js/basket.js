@@ -13,17 +13,20 @@ class Basket {
     this.x = theX;
     this.y = theY;
 
-    if (speedX !== undefined) {
-      this.speedX = speedX;
-    }
+    // if (speedX !== undefined) {
+    //   this.speedX = speedX;
+    // }
 
-    if (speedY !== undefined) {
-      this.speedY = speedY;
-    }
+    // if (speedY !== undefined) {
+    //   this.speedY = speedY;
+    // }
 
     this.loadImages();
   }
-
+  setPos(xpos, ypos) {
+    this.x = xpos;
+    this.y = ypos;
+  }
   loadImages() {
     this.image = new Image();
     //     this.image.onload = function () {
@@ -32,7 +35,7 @@ class Basket {
     this.image.onload = () => {
       this.draw();
     };
-    this.image.src = "./assets/img/basket.png";
+    this.image.src = './assets/img/basket.png';
   }
 
   draw() {
@@ -46,7 +49,7 @@ class Basket {
   }
 
   tickB() {
-    this.move();
+    // this.move();
     this.draw();
   }
 }

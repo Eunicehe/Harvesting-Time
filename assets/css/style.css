@@ -3,7 +3,28 @@ body {
 
 }
 
-#drawing {
+.game {
     background-color: white;
+    border: 1px solid white;
 
+}
+
+
+#score-life {
+    text-align: center;
+    font-size: 23px;
+    background-color: #eaeaea;
+}
+
+#restart {
+    border: 0;
+    position: absolute;
+    height: 10px;
+    width: 100px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 174, 174);
+    top: 40px;
+    font-size: 35px;
+    display: none;
+    cursor: pointer;
 }
