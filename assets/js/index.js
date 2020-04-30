@@ -1,39 +1,61 @@
 document.addEventListener('mousemove', getMouse);
 const canvas = document.querySelector('#game');
 const ctx = canvas.getContext('2d');
+// window.onload = function() {
+// const canvas = document.querySelector('#game');
+// const ctx = canvas.getContext('2d');
 
-//随机y
+// const image = document.getElementById('myImage');
+// ctx.drawImage(image, 0, 0);
+// }
+
+let image;
+
+function loadImages() {
+  image = new Image();
+  image.onload = function() {
+    draw();
+  };
+  image.src = './assets/img/bg.png';
+}
+
+function draw() {
+  ctx.beginPath();
+  // ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+  ctx.drawImage(image, 0, 0, 800, 500);
+}
+
+loadImages();
+
+
+//random y
 
 function getRandomArbitrary(min, max) {
   return Math.random() * (max - min) + min;
 }
 
 const apple = new fruit(30, 10, 0, 4, 'apple', './assets/img/apple.png');
-// const apple = new Apple(30, -10, 0, 3);
-// const mango = new Mango(150, -10 - getRandomArbitrary(200, 1000), 0, 3);
-// const grape = new Grape(250, -10 - getRandomArbitrary(220, 1000), 0, 3);
-// const orange = new Orange(400, -10 - getRandomArbitrary(200, 1000), 0, 3);
-// const peach = new Peach(550, -10 - getRandomArbitrary(200, 1000), 0, 3);
-// const pear = new Pear(700, -10 - getRandomArbitrary(200, 1000), 0, 3);
 const mango = new fruit(
   150,
-  -10 - getRandomArbitrary(200, 1000),
+  apple.y - getRandomArbitrary(100, 500),
   0,
   3,
   'mango',
   './assets/img/mango.png'
 );
+
 const grape = new fruit(
   250,
-  -10 - getRandomArbitrary(200, 1000),
+  mango.y - getRandomArbitrary(100, 500),
   0,
   3,
   'grape',
   './assets/img/grape.png'
 );
+
 const orange = new fruit(
   400,
-  -10 - getRandomArbitrary(200, 1000),
+  grape.y - getRandomArbitrary(100, 500),
   0,
   3,
   'orange',
@@ -42,7 +64,7 @@ const orange = new fruit(
 
 const peach = new fruit(
   550,
-  -10 - getRandomArbitrary(200, 1000),
+  orange.y - getRandomArbitrary(100, 500),
   0,
   3,
   'peach',
@@ -51,7 +73,7 @@ const peach = new fruit(
 
 const pear = new fruit(
   700,
-  -10 - getRandomArbitrary(200, 1000),
+  peach.y - getRandomArbitrary(100, 500),
   0,
   3,
   'pear',
@@ -63,6 +85,7 @@ function getMouse(e) {
   // console.log(e.clientX);
   basket.setPos(e.clientX - 35, 300);
 }
+
 const updateFrame = () => {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   apple.tick();
@@ -179,3 +202,10 @@ updateFrame();
 // };
 
 // tickB();
+
+// const apple = new Apple(30, -10, 0, 3);
+// const mango = new Mango(150, -10 - getRandomArbitrary(200, 1000), 0, 3);
+// const grape = new Grape(250, -10 - getRandomArbitrary(220, 1000), 0, 3);
+// const orange = new Orange(400, -10 - getRandomArbitrary(200, 1000), 0, 3);
+// const peach = new Peach(550, -10 - getRandomArbitrary(200, 1000), 0, 3);
+// const pear = new Pear(700, -10 - getRandomArbitrary(200, 1000), 0, 3);
