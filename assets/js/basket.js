@@ -13,13 +13,6 @@ class Basket {
     this.x = theX;
     this.y = theY;
 
-    // if (speedX !== undefined) {
-    //   this.speedX = speedX;
-    // }
-
-    // if (speedY !== undefined) {
-    //   this.speedY = speedY;
-    // }
 
     this.loadImages();
   }
@@ -29,9 +22,7 @@ class Basket {
   }
   loadImages() {
     this.image = new Image();
-    //     this.image.onload = function () {
-    //     this.draw();
-    //     };
+
     this.image.onload = () => {
       this.draw();
     };
@@ -49,7 +40,6 @@ class Basket {
   }
 
   tickB() {
-    // this.move();
     this.draw();
   }
 }

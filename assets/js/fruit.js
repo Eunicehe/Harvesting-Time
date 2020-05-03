@@ -4,10 +4,7 @@ class fruit {
   fruitName;
   x;
   y;
-  // speed = {
-  //     x: 1,
-  //     y: 1,
-  // };
+
   speedX = 1;
   speedY = 1;
   isCaptured = false;
@@ -34,9 +31,7 @@ class fruit {
 
   loadImages() {
     this.image = new Image();
-    //     this.image.onload = function () {
-    //     this.draw();
-    //     };
+
     this.image.onload = () => {
       this.draw();
     };
@@ -56,30 +51,49 @@ class fruit {
   // detect if the fruit is captured by the basket
 
   isFruitCaptured() {
-    if (this.x - 30 < basket.x && basket.x < this.x + 30 && basket.y < this.y - 10 ) {
-
+    if (
+      this.isOut == false &&
+      this.x >= basket.x - 20 &&
+      this.x <= basket.x + 20 &&
+      this.y > basket.y &&
+      this.y < basket.y + 70
+    ) {
       this.isCaptured = true;
+
+      updateScore(1);
     }
   }
 
   isFruitOut() {
-    if (this.y - this.height/2 > canvas.height) {
-      isOut = true;
+    if (this.y + this.image.clientHeight > canvas.height) {
+      this.isOut = true;
+      // console.log('delete me');
+      updateLife(1);
     }
   }
+  getIsOut() {
+    return this.isOut;
+  }
 
-
+  getIsCapture() {
+    return this.isCaptured;
+  }
   tick() {
-    this.move();
-    this.draw();
-    this.isFruitCaptured();
-    this.isFruitOut();
-    if (isCaptured || isOut ) {
-      // regenerate coordinates
-    }
-
     if (this.isCaptured == true) {
       console.log('captured!');
+      return;
     }
+
+    if (this.isCaptured == true || this.isOut == true) {
+      // regenerate coordinates
+      console.log('out!');
+      return;
+    }
+
+    this.move();
+    this.draw();
+
+    this.isFruitCaptured();
+    this.isFruitOut();
   }
 }
