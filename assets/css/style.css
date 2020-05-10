@@ -12,7 +12,7 @@ body {
   top: 20px;
   left: 310px;
   font-size: 27px;
-   color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
   background-color: transparent;
   justify-self: center;
   text-align: center;
@@ -21,8 +21,8 @@ body {
 
 #restart {
   position: absolute;
-  left: 320px;
-  top: 210px;
+  left: 325px;
+  top: 220px;
   border: 0;
   color: rgb(255, 133, 27);
   font-size: 45px;
@@ -33,5 +33,5 @@ body {
 }
 
 #restart:hover {
-    color: rgb(255, 213, 0);
+  color: rgb(255, 213, 0);
 }
