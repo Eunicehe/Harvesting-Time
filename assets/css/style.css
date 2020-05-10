@@ -14,19 +14,17 @@ body {
   font-size: 27px;
   background-color: rgb(211, 211, 211);
   justify-self: center;
-  margin-left: 40%;
+  /* margin-left: 40%; */
   height: 100%;
 }
 
 #restart {
   position: absolute;
   left: 330px;
-  top: 230px;
+  top: 250px;
   border: 0;
-  /* height: 10px;
-  width: 120px; */
   color: rgb(255, 133, 27);
-  top: 35px;
+  /* Padding-top: 250px; */
   font-size: 40px;
   cursor: pointer;
   /* margin-left: 40px; */
