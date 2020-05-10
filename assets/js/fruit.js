@@ -85,7 +85,6 @@ class fruit {
     }
 
     if (this.isCaptured == true || this.isOut == true) {
-      // regenerate coordinates
       console.log('out!');
       return;
     }

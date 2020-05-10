@@ -8,34 +8,28 @@ body {
 }
 
 #score-life {
-  /* position: absolute; */
-  left: 330px;
-  top: 230px;
+  position: absolute;
+  top: 20px;
+  left: 310px;
   font-size: 27px;
-  background-color: rgb(211, 211, 211);
+   color: rgb(255, 255, 255);
+  background-color: transparent;
   justify-self: center;
-  /* margin-left: 40%; */
+  text-align: center;
   height: 100%;
 }
 
 #restart {
   position: absolute;
-  left: 330px;
-  top: 250px;
+  left: 320px;
+  top: 210px;
   border: 0;
   color: rgb(255, 133, 27);
-  /* Padding-top: 250px; */
-  font-size: 40px;
+  font-size: 45px;
   cursor: pointer;
-  /* margin-left: 40px; */
-  /* height: 100%; */
-/*
-   background-color: transparent;
-    display: none;
-    /* font-family: 'Permanent Marker', cursive; */
-    text-align: center;
-
-    transition-duration: 0.3s;
+  background-color: transparent;
+  text-align: center;
+  transition-duration: 0.3s;
 }
 
 #restart:hover {

@@ -46,7 +46,6 @@ function draw() {
 
 loadImages();
 
-//random y
 
 const basket = new Basket(0, 330, 0, 0);
 
@@ -105,7 +104,4 @@ function restartGame() {
   scoreElement.innerText = score;
   lifeElement.innerText = life;
   restartButton.style.display = 'none';
-  // var click = document.getElementById('restart');
-  // restartButton.style.display = 'none';
-  // document.location.reload();
 }
